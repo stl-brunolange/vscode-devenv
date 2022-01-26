@@ -295,8 +295,8 @@ about `devcontainer.json`.
 1. Set `"workspaceFolder"` to `"/home/dev/code/webapp"`.
 2. Though not strictly necessary, it is highly recommened that you install the Python plugin for
 VS Code.
-You can request VS Code to install it automatically within the container by adding `"ms-python.
-python"` to the list of extensions in `"extensions"`.
+You can request VS Code to install it automatically within the container by adding
+`"ms-python.python"` to the list of extensions in `"extensions"`.
 3. Set `"shutdown"` action to `"none"`. This will prevent VS Code from shutting down the
 containers every time it is closed.
 4. Set `"remoteUser"` to `"dev"`. This is the development user registered inside the `devbox`
