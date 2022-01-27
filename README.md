@@ -394,24 +394,24 @@ Paste the following contents inside a new file in `~/code/webapp/insight/server/
 ```python
 from config.docker_compose import *
 
-DOMAIN = 'docker.streetlightdata.net' # set this to your hostname
+DOMAIN = "docker.streetlightdata.net"  # set this to your hostname
 
 # Uncomment to use dataservices to run metrics (need to be on StreetLight's VPN).
 # If you don't need to run metrics, you do not need these.
 # DS_BASE = 'http://dsg-dev.streetlightdata.net:9000'
 # DS_DBLINK = 'dsdbdev host=dsg-dev.streetlightdata.net port=6543 user=ds_ro password=ds_ro'
 
-REFERENCE_DUMP_FOLDER = '/Users/<your windows User directory name>/data/webapp' # E.g. /Users/roy.seto/data/webapp
-US_REFERENCE_DUMP_FILENAME = 'webapp_us_reference_80.dmp'
-REFERENCE_VERSION = '80'
-OSM_UNSPLIT_DUMP_FILENAME = 'usca_osm_roads_64b.dmp'
-OSM_SPLIT_DUMP_FILENAME = 'webapp_reference_sfva_78_2.dmp'
+REFERENCE_DUMP_FOLDER = "/home/dev/code/data/webapp"
+US_REFERENCE_DUMP_FILENAME = "webapp_us_reference_80.dmp"
+REFERENCE_VERSION = "80"
+OSM_UNSPLIT_DUMP_FILENAME = "usca_osm_roads_64b.dmp"
+OSM_SPLIT_DUMP_FILENAME = "webapp_reference_sfva_78_2.dmp"
 
-CANNED_ZONE_ZIP_DUMP_FILENAME = 'dev_reference_zone_us_zip_v3.dmp'
-CANNED_ZONE_BLKGRP_DUMP_FILENAME = 'dev_reference_zone_us_blkgrp_v2.dmp'
-CANNED_ZONE_TAZ_DUMP_FILENAME = 'dev_reference_zone_us_taz_v2.dmp'
-CANNED_ZONE_GRID_DUMP_FILENAME = 'dev_reference_zone_usca_grid_v2.dmp'
-CANNED_ZONE_DA_DUMP_FILENAME = 'dev_reference_zone_ca_da_v2.dmp'
+CANNED_ZONE_ZIP_DUMP_FILENAME = "dev_reference_zone_us_zip_v3.dmp"
+CANNED_ZONE_BLKGRP_DUMP_FILENAME = "dev_reference_zone_us_blkgrp_v2.dmp"
+CANNED_ZONE_TAZ_DUMP_FILENAME = "dev_reference_zone_us_taz_v2.dmp"
+CANNED_ZONE_GRID_DUMP_FILENAME = "dev_reference_zone_usca_grid_v2.dmp"
+CANNED_ZONE_DA_DUMP_FILENAME = "dev_reference_zone_ca_da_v2.dmp"
 CANNED_ZONE_OSM_ALL_DUMP_FILENAME = "dev_reference_zone_usca_osm_all_80_1.dmp"
 CANNED_ZONE_TRACT_DUMP_FILENAME = "webapp_reference_zone_us_tract_82_dev.dmp"
 CANNED_ZONE_RAIL_DUMP_FILENAME = "dev_reference_zone_usca_rail_v3.dmp"
@@ -420,15 +420,15 @@ CANNED_ZONE_CA_SUBDIVISION_DUMP_FILENAME = "dev_reference_zone_ca_subdivision_v1
 
 DISABLE_QLIK = True
 DISABLE_UAF = True
-GOOGLE_CLIENT_ID_OR_API_KEY = 'client=gme-streetlightdatainc'
+GOOGLE_CLIENT_ID_OR_API_KEY = "client=gme-streetlightdatainc"
 
-DEFAULT_QLIK_ENV = 'viz-dev'
+DEFAULT_QLIK_ENV = "viz-dev"
 
-MVT_REDIS_HOST = 'redis_mvt'
+MVT_REDIS_HOST = "redis_mvt"
 MVT_REDIS_PORT = 6379
 MVT_REDIS_DB = 10
 MVT_REDIS_MAP_CFG_TTL_HOURS = 1
-MVT_REDIS_MAP_CFG_TTL = (MVT_REDIS_MAP_CFG_TTL_HOURS * 3600) # seconds
+MVT_REDIS_MAP_CFG_TTL = MVT_REDIS_MAP_CFG_TTL_HOURS * 3600  # seconds
 
 MVT_SERVER_EXTERNAL_URL = "http://docker.streetlightdata.net:8283/tiles"
 
