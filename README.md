@@ -518,7 +518,7 @@ $ git config --global user.email <first.last>@streetlightdata.com
 
 ----
 
-## Apendix
+## Appendix
 
 ### VS Code workspace config file
 
