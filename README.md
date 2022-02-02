@@ -111,6 +111,11 @@ permissions set to `600` (`ssh` refuses to work with key files that are too perm
 $ chmod 600 ~/.ssh/id_rsa*
 ```
 
+Register your public SSH key in Github: https://github.com/settings/keys.
+
+![Github SSH](images/github_ssh.png)
+
+
 ### Cloning the repo
 
 Once you get confirmation from OPs that your public key has been registered in Github, you should
