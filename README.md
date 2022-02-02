@@ -601,3 +601,12 @@ If you run into a `No module named manage` issue when starting the debugger, add
 to the `manage.py` script:
 
 ![troubleshoot debugger](images/del-package.png)
+
+
+### MVT server configuration
+
+From the devbox, run the following command to configure the MVT server:
+
+```
+$ echo MSET mvtConfig.dev.dbHost db mvtConfig.dev.dbName appdb | redis-cli -h redis_mvt -n 11
+```
