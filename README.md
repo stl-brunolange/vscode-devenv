@@ -253,7 +253,36 @@ $ docker volume create --name=stl-home
 stl-home
 ```
 
-We can now download all the required images and bring up all of the containers at once with the command:
+### Authenticate to our Google Cloud Platform project
+
+Before we can bring the containers described in the `docker-compose.yml` file, we need to provide
+GCP with our credentials so that we're allowed to download the container images from the project's
+bucket.
+
+The Google Cloud SDK provides a series of utility commands that we can use to interact with a GCP
+bucket. In order to install the Google Cloud SDK, run the following commands in your Ubuntu shell:
+
+```terminal
+$ sudo apt-get install apt-transport-https ca-certificates gnupg
+$ echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+$ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+$ sudo apt-get update && sudo apt-get install google-cloud-sdk
+```
+
+Next, run the following command and follow the instructions to authenticate yourself.
+
+```
+$ gcloud auth login
+```
+
+Then, we must configure docker to work with GCP:
+
+```
+$ gcloud auth configure-docker
+```
+
+Finally, we can now download all the required images and bring up all of the containers at once
+with the command:
 
 ```terminal
 docker-compose up -d
@@ -322,23 +351,6 @@ The Insight Webapp database requires some seed data that we currently host in a 
 Platform (GCP) bucket. We'll need to download those files first.
 
 ### Download database dumps from our GCP bucket
-
-The Google Cloud SDK provides a series of utility commands that we can use to interact with a GCP
-bucket. In order to install the Google Cloud SDK, run the following commands in your Ubuntu shell:
-
-
-```terminal
-$ sudo apt-get install apt-transport-https ca-certificates gnupg
-$ echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-$ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
-$ sudo apt-get update && sudo apt-get install google-cloud-sdk
-```
-
-Next, run the following command and follow the instructions to authenticate yourself.
-
-```
-$ gcloud auth login
-```
 
 Create a new folder at the root of the repositoryto host all the database data we'll need to seed
 the database.
