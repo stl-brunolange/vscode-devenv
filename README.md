@@ -426,7 +426,7 @@ DOMAIN = "docker.streetlightdata.net"  # set this to your hostname
 # DS_BASE = 'http://dsg-dev.streetlightdata.net:9000'
 # DS_DBLINK = 'dsdbdev host=dsg-dev.streetlightdata.net port=6543 user=ds_ro password=ds_ro'
 
-REFERENCE_DUMP_FOLDER = "/home/dev/code/data/webapp"
+REFERENCE_DUMP_FOLDER = "/home/dev/code/webapp/data"
 US_REFERENCE_DUMP_FILENAME = "webapp_us_reference_80.dmp"
 REFERENCE_VERSION = "80"
 OSM_UNSPLIT_DUMP_FILENAME = "usca_osm_roads_64b.dmp"
