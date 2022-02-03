@@ -349,6 +349,14 @@ container. Go ahead and accept.
 
 Notice how the bottom left corner should now read "Dev Container: ...`.
 
+## Build the client code
+
+Under `~/code/webapp/insight/client`, run the following commands:
+
+```terminal
+./maybe_npm_i.sh
+./build_dev.sh
+```
 
 ## Setup the application database
 
@@ -462,7 +470,7 @@ Run the following commands from the `devbox` terminal in VS Code.
 ```terminal
 dev@df329bb7d2f0 $ cd ~/code/webapp/insight/server
 dev@df329bb7d2f0 $ sudo ./create_flask_venv.sh
-dev@df329bb7d2f0 $sudo /usr/local/webapp/flask/bin/python -m pip install -r requirements-dev.txt
+dev@df329bb7d2f0 $ sudo /usr/local/webapp/flask/bin/python -m pip install -r requirements-dev.txt
 ```
 
 ### Create and populate the application database
@@ -495,14 +503,7 @@ Give it a test run:
 $ ./test_unit.sh -s tests/test_models/test_org.py:OrgTestCase
 ```
 
-## Build the client code
 
-Under `~/code/webapp/insight/client`:
-
-```terminal
-./maybe_npm_i.sh
-./build_dev.sh
-```
 
 ## Run the app server
 
