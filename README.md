@@ -493,7 +493,6 @@ Here's how to create it:
 ```terminal
 dev@df329bb7d2f0 $ ./manage.py --config=config.testing database create
 dev@df329bb7d2f0 $ pg_restore -U postgres -p 6543 -d appdb -h dbtest --no-privileges ~/code/webapp/data/webapp_reference_us_test_78_1.dmp
-dev@df329bb7d2f0 $ ./manage.py --config=config.testing database create_refdb
 dev@df329bb7d2f0 $ ./manage.py --config=config.testing database create_schema
 ```
 
